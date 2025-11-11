@@ -23,9 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: [
+    origin: [process.env.FRONTEND_URL,
       "http://localhost:5173",
-      "https://luckynumber-0sd9.onrender.com"
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
