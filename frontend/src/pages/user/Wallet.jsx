@@ -18,7 +18,6 @@ const Wallet = () => {
   const [amount, setAmount] = useState("");
   const [depositRequest, setDepositRequest] = useState([])
   const { user } = useContext(AuthContext);
-console.log(user._id,"User");
 
   // Update the document title when the component mounts
   useEffect(() => {
@@ -85,7 +84,6 @@ console.log(user._id,"User");
       
     }
   }
-  console.log(depositRequest);
   
   return (
     <div>

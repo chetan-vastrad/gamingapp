@@ -22,7 +22,6 @@ const History = () =>{
     useEffect(()=>{
         allHistory();
     },[user])
-console.log(bets);
 
     return (
         <div>
