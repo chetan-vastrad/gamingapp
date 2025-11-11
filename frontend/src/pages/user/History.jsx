@@ -39,7 +39,7 @@ console.log(bets);
                ))} */}
                 </div>
                <div className="">
-                 <table className="max-w-md mx-auto text-black pl-4 divide-y divide-gray-200">
+                 <table className="mb-20 max-w-md mx-auto text-black pl-4 divide-y divide-gray-200">
                    <thead className="bg-gray-50">
               <tr>
                 <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase">

@@ -6,8 +6,8 @@ import Menu from "./Menu";
 const Header = ({title, leftcomponent}) => {
     const [isMenuOpen,setIsMenuOpen] = useState(false)
   return (
-   <div className="mb-10">
-     <div className="text-white text-center p-4 border-gray-600 fixed top-0 w-full flex items-center justify-between px-4 bg-[#1c1022]">
+   <div className="mb-10 flex justify-center">
+     <div className=" max-w-md mx-auto text-white text-center p-4 border-gray-600 fixed top-0 w-full flex items-center justify-between px-4 bg-[#1c1022]">
       <div>
        {leftcomponent? (leftcomponent): (<GiHamburgerMenu className="text-2xl" onClick={()=>setIsMenuOpen(!isMenuOpen)} />)}
       </div>

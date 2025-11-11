@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <div>
       <div>
-        <img src={RoundedLogo} alt="Logo" className="w-40 h-40 mx-auto mt-10" />
+        <img src={RoundedLogo} alt="Logo" className="w-40 h-40 mx-auto mt-10 rotate-logo" />
         <h2 className="text-3xl font-semibold text-center mt-4 text-game-color">
           Welcome Back!
         </h2>

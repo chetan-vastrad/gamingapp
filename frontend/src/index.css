@@ -27,3 +27,63 @@ input::-webkit-outer-spin-button,
   input[type=number] {
     -moz-appearance: textfield;
   }
+
+  @keyframes rotateInfinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-logo {
+  animation: rotateInfinite 8s linear infinite;
+  transform-origin: center;
+}
+@keyframes rotateBg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* wrapper keeps layout inline */
+.bg-image {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+  overflow: hidden; /* hide edges of rotating layer */
+  margin: 10px 0;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+  z-index: 2;
+}
+
+/* pseudo-element handles actual rotation */
+.bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/rounded.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rotateBg 10s linear infinite; /* 🔁 rotation speed */
+  z-index: -1;
+  transform-origin: center;
+}
+
+/* keep text above rotating layer */
+.bg-image span,
+.bg-image h2,
+.bg-image * {
+  position: relative;
+  z-index: 1;
+}

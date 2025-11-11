@@ -34,10 +34,10 @@ const Profile = () =>{
           />
         }
       />
-      <div className="pt-10 max-w-md mx-auto text-white mr-4 ml-4">
-        <h4 className="text-xl font-bold mb-4">User Profile Page</h4>
+      <div className="pt-12 max-w-md mx-auto text-white">
+        <h4 className="text-xl font-bold mb-4 mr-4 ml-4">User Profile Page</h4>
       </div>
-      <div>
+      <div className="pt-12 max-w-md mx-auto">
         <form className="max-w-md mx-auto text-white mr-4 ml-4">
           <div className="mb-4">
             <label className="block text-sm font-bold mb-2" htmlFor="name">
@@ -53,44 +53,13 @@ const Profile = () =>{
               disabled
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-sm font-bold mb-2" htmlFor="password">
-              Old Password
-            </label>
-            <input
-              type="password"
-              id="old-password"
-              name="password"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-[#d6ae51] bg-[rgba(214,174,81,0.2)] text-white"
-              placeholder="Enter old password"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-bold mb-2" htmlFor="password">
-              New Password
-            </label>
-            <input
-              type="password"
-              id="new-password"
-              name="confirmpassword"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-[#d6ae51] bg-[rgba(214,174,81,0.2)] text-white"
-              placeholder="Enter new password"
-            />
-          </div>
-          <div className="mb-6 text-end">
-            <button
-              type="submit"
-              className="w-50 button-game-color text-white py-2 px-4 rounded-lg transition duration-300"
-            >
-              Update Profile
-            </button>
-          </div>
         </form>
       </div>
-      <div className="max-w-md mx-auto text-white mr-4 ml-4">
-        <h4 className="text-xl font-bold mb-4">App & Support</h4>
+      <div className="max-w-md mx-auto text-white">
+        <h4 className="text-xl font-bold mb-4 mr-4 ml-4">App & Support</h4>
       </div>
-      <div className="flex-col gap-4 mb-5 flex p-6 text-center  bg-[rgba(214,174,81,0.5)] rounded-lg mr-4 ml-4">
+    <div className=" max-w-md mx-auto">
+        <div className="flex-col gap-4 mb-5 flex p-6 text-center  bg-[rgba(214,174,81,0.5)] rounded-lg mr-4 ml-4">
         <div className="flex justify-between w-full items-center">
           <div className="flex items-center gap-4">
             <IoMdHelpCircleOutline className="text-4xl text-white bg-[#d6ae5194] rounded-lg p-2" />
@@ -113,11 +82,14 @@ const Profile = () =>{
           <FaChevronRight className="text-white text-sm  cursor-pointer" />
         </div>
       </div>
-      <div className="mr-4 ml-4" onClick={handleLogout}>
+    </div>
+     <div  className="max-w-md mx-auto">
+       <div className="mr-4 ml-4" onClick={handleLogout}>
         <button className="w-full button-game-color text-white py-2 px-4 rounded-lg transition duration-300 mb-20 max-w-md mx-auto ">
         Logout
       </button>
       </div>
+     </div>
       <Footer />
     </div>
   );
