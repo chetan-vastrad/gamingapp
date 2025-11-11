@@ -1,7 +1,5 @@
 import express from "express";
 import dotenv from "dotenv";
-import http from "http";
-import { Server } from "socket.io";
 import connectToDb from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
@@ -16,18 +14,19 @@ dotenv.config({ quiet: true });
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-const HOST = process.env.HOST || "localhost";
 
 // ✅ Connect MongoDB
 connectToDb();
-
 
 // ✅ Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://luckynumber-0sd9.onrender.com/"],
+    origin: [
+      "http://localhost:5173",
+      "https://luckynumber-0sd9.onrender.com"
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
@@ -44,5 +43,5 @@ app.use("/api/open-number", openNumberRoutes);
 
 // ✅ Start the server
 app.listen(PORT, () => {
-  console.log(`✅ Server running at http://${HOST}:${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
